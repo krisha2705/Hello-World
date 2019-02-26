@@ -16,17 +16,5 @@ agent any
 	}
        }
        }
-	stage('SonarQube Analysis'){
-	
-           steps {
-	   withMaven(maven : 'apache-maven-3.6.0'){
-	   withSonarQubeEnv('Sonar-6')
-	   {
-	   bat 'set'
-	   bat "mvn sonar:sonar"
-	 }
-         }      
-       }    
-    }	
      }
 }
