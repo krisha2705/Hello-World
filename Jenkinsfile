@@ -5,7 +5,7 @@ agent any
 	
 	   stage('SCM Checkout'){
 	       steps {
-	   git branch: 'master', credentialsId: '64c944c0-c872-476c-a81a-37178b9c8487', url: 'https://github.com/krisha2705/Hello-World/'
+	   git branch: 'dev', credentialsId: '64c944c0-c872-476c-a81a-37178b9c8487', url: 'https://github.com/krisha2705/Hello-World/'
 	}
       }
 	stage('Build Package'){
@@ -25,10 +25,13 @@ agent any
 	   {
 	  mvn sonar:sonar \
           -Dsonar.projectKey=my-app \
-          -Dsonar.host.url=http://localhost:9000 \
+          -Dsonar.host.url=http://localhost:9000 \ 
+		  }
+		   {
           -Dsonar.login=2f110efbc678937e79ef7f3058d6a5e4f5f87db0
 	 }
          }         
+	 }
 	 }
           stage("Quality Gate Satus Check"){
 	
