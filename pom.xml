@@ -20,14 +20,30 @@
     <module>server</module>
     <module>webapp</module>
   </modules>
+         
+<distributionManagement>
 
-  <distributionManagement>
+  <repository>
+    <id>releases</id>
+    <name>releases</name>
+    <url>http://localhost:8081/repository/releases/</url>
+  </repository>
+
+  <snapshotRepository>
+     <id>snapshots</id>
+     <name>snapshots</name>
+     <url>http://localhost:8081/repository/snapshots/</url>
+  </snapshotRepository>
+
+</distributionManagement>
+
+  <!--- <distributionManagement>
     <site>
       <id>site-server</id>
       <name>Test Project Site</name>
       <url>file:///tmp/maven-project-site</url>
     </site>
-  </distributionManagement>
+  </distributionManagement> -->
 
   <build>
     <plugins>
