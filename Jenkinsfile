@@ -31,22 +31,7 @@ agent any
          }         
 	 }
 	 }
-          stage("Quality Gate Satus Check"){
-	
-            steps {
-	     
-         timeout(time: 1, unit: 'HOURS') 
-      {
-	     
-             def qg = waitforQualityGate()
-	     
-             if (qg.status != 'OK') {
-		  
-             error "Pipeline aborted due to quality gate failure: ${qg.status}"
-	  
-          }
-      }
-	    }
+         
 	}
 	
 	 }
