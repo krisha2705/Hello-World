@@ -28,8 +28,7 @@ agent any
           -Dsonar.host.url=http://localhost:9000 \
           -Dsonar.login=2f110efbc678937e79ef7f3058d6a5e4f5f87db0
 	 }
-         }      
-       }    
+         }         
 	 }
 	}
 	}
