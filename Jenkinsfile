@@ -22,12 +22,10 @@ agent any
            steps {
 	   withMaven(maven : 'apache-maven-3.6.0'){
 	   withSonarQubeEnv('Sonar-6')
-	   {
+		   {
 	  mvn sonar:sonar \
           -Dsonar.projectKey=my-app \
           -Dsonar.host.url=http://localhost:9000 \ 
-		  }
-		   {
           -Dsonar.login=2f110efbc678937e79ef7f3058d6a5e4f5f87db0
 	 }
          }         
