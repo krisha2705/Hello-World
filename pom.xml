@@ -161,7 +161,22 @@
       </plugins>
     </pluginManagement>
   </build>
+         
+<distributionManagement>
 
+  <repository>
+    <id>releases</id>
+    <name>releases</name>
+    <url>http://localhost:8081/repository/releases/</url>
+  </repository>
+
+  <snapshotRepository>
+     <id>snapshots</id>
+     <name>snapshots</name>
+     <url>http://localhost:8081/repository/snapshots/</url>
+  </snapshotRepository>
+
+</distributionManagement>
      
   <dependencyManagement>
     <dependencies>
@@ -217,21 +232,5 @@
   <prerequisites>
     <maven>3.0.3</maven>
   </prerequisites>
-
-<distributionManagement>
-
-  <repository>
-    <id>releases</id>
-    <name>releases</name>
-    <url>http://localhost:8081/repository/releases/</url>
-  </repository>
-
-  <snapshotRepository>
-     <id>snapshots</id>
-     <name>snapshots</name>
-     <url>http://localhost:8081/repository/snapshots/</url>
-  </snapshotRepository>
-
-</distributionManagement>
          
 </project>
