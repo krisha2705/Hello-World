@@ -13,7 +13,7 @@ agent any
 	     withMaven(maven : 'apache-maven-3.6.0')
 	   {
 	   bat 'set'
-	   bat "mvn clean package"
+	   bat "mvn clean deploy"
 	}
        }
        }
