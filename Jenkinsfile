@@ -28,5 +28,12 @@ agent any
          }         
 	 }      
   }
+	stage('Package Deployment')
+
+	steps {
+   	sshagent(['Test-Server']) {
+        sh 'ssh -o StrictHostKeyChecking=no target/*.war ansible@18.191.22.83:/home/ansible'
+    }
+  } 
 }
 }
