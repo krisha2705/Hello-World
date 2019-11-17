@@ -5,5 +5,5 @@ From tomcat:8-jre8
 MAINTAINER "yogesh.bagul26@gmail.com" 
 RUN mkdir -p /usr/local/tomcat/webapps
 ENV PROJECT_HOME /usr/local/tomcat/webapps
-COPY target/Server.jar $PROJECT_HOME/Server.jar
+COPY target/server.jar $PROJECT_HOME/server.jar
 WORKDIR $PROJECT_HOME
