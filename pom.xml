@@ -4,9 +4,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example.maven-project</groupId>
-  <artifactId>maven-project</artifactId>
+  <artifactId>webapp</artifactId>
   <packaging>pom</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>Maven Project</name>
   <description>Sample Maven project with a working, deployable site.</description>
   <url>http://www.example.com</url>
@@ -222,12 +222,12 @@
     </dependencies>
   </dependencyManagement>
 
-  <scm>
+  <!-- <scm>
     <connection>scm:git:git@github.com:jleetutorial/maven-project.git</connection>
     <developerConnection>scm:git:git@github.com:jleetutorial/maven-project.git</developerConnection>
     <tag>HEAD</tag>
     <url>http://github.com/jleetutorial/maven-project</url>
-  </scm>
+  </scm> -->
 
   <prerequisites>
     <maven>3.0.3</maven>
