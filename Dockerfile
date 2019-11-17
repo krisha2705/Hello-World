@@ -5,5 +5,5 @@ From tomcat:8-jre8
 MAINTAINER "yogesh.bagul26@gmail.com" 
 RUN mkdir -p /opt/app
 ENV PROJECT_HOME /opt/app
-COPY target/webapp.war $PROJECT_HOME/webapp.war
+COPY /var/lib/jenkins/workspace/NewProjectHW/webapp/target/webapp.war $PROJECT_HOME/webapp.war
 WORKDIR $PROJECT_HOME
