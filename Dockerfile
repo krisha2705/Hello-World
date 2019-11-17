@@ -1,6 +1,8 @@
-# Pull base image 
 From tomcat:8-jre8 
 
 # Maintainer 
 MAINTAINER "yogesh.bagul26@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
+RUN mkdir -p /usr/local/tomcat/webapps
+ENV PROJECT_HOME /usr/local/tomcat/webapps
+COPY target/server.jar $PROJECT_HOME/server.jar
+WORKDIR $PROJECT_HOME
